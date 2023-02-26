@@ -29,7 +29,7 @@ The Worker is shipped with dedicated Docker image that contains headless Google 
 
 GitHub
 ```sh
-docker run -d -p 8080:8080 ghcr.io/wprobson/docker-chrome-stealth:latest
+docker run -d -p 8080:8080 ghcr.io/wprobson/stealthy-ferret-worker:latest
 ```
 
 Alternatively, if you want to use your own version of Chrome, you can run the Worker locally.
