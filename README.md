@@ -18,6 +18,8 @@
 	</a>
 </p>
 
+**This is a fork of [worker](https://github.com/MontFerret/worker) with the chrome image replaced with one that launches chromium with puppeteer stealth to avoid detection methods**
+
 **Worker** is a simple HTTP server that accepts FQL queries, executes them and returns their results.
 OpenAPI v2 schema can be found [here](https://raw.githubusercontent.com/MontFerret/cli/master/reference/ferret-worker.yaml).
 
@@ -25,13 +27,9 @@ OpenAPI v2 schema can be found [here](https://raw.githubusercontent.com/MontFerr
 
 The Worker is shipped with dedicated Docker image that contains headless Google Chrome, so feel free to run queries using `cdp` driver:
 
-DockerHub
-```sh
-docker run -d -p 8080:8080 montferret/worker
-```
 GitHub
 ```sh
-docker run -d -p 8080:8080 ghcr.io/montferret/worker
+docker run -d -p 8080:8080 ghcr.io/wprobson/docker-chrome-stealth:latest
 ```
 
 Alternatively, if you want to use your own version of Chrome, you can run the Worker locally.
